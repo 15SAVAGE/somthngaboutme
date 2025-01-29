@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15SAVAGE(arsenij)</title>
+    <style>
+        body {
+            font-family: Candara, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            color: white;
+        }
+        #video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        section {
+            position: relative;
+            z-index: 1;
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            background: rgba(51, 51, 51, 0.8);
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        .info-box {
+            background: rgba(40, 40, 40, 0.9);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            margin: 20px auto;
+            border-radius: 10px;
+            max-width: 800px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+            border-left: 5px solid #ff6f61;
+            position: relative;
+            overflow: hidden; 
+        }
+        .info-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .info-box img {
+            max-width: 45%;
+            border-radius: 10px;
+            margin-right: 20px;
+            float: left; 
+        }
+        .info-box h2 {
+            font-size: 24px; 
+            color: #e8e8e8; 
+            margin-top: 0; 
+            margin-bottom: 10px; 
+        }
+        .info-box p {
+            font-size: 15px; 
+            text-align: left;
+            color: #fff;
+            text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+            margin: 0 0 10px 0; 
+            line-height: 1.5; 
+        }
+        .info-box-button {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            padding: 8px 16px;
+            font-size: 14px;
+            color: white;
+            background: #666;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+        }
+        .info-box-button:hover {
+            background: #999;
+            transform: scale(1.05);
+        }
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(10px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        .modal {
+            background: rgba(51, 51, 51, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 400px;
+            text-align: center;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+        }
+        .modal h1 {
+            font-size: 24px;
+            color: #ff6f61;
+            margin-bottom: 10px;
+        }
+        .modal p {
+            font-size: 15px; 
+            color: white;
+            margin: 10px 0;
+            line-height: 1.5; 
+        }
+        .button {
+            display: inline-block;
+            margin: 10px;
+            padding: 15px 25px;
+            font-size: 18px;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+            background: #666;
+            width: 300px;
+        }
+        .button:hover {
+            background: #999;
+            transform: scale(1.1);
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+        }
+        footer {
+            background: #222;
+            color: white;
+            padding: 10px;
+            position: relative;
+            width: 100%;
+            text-align: center;
+            opacity: 0.7;
+            margin-top: 40px;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let infoBoxes = document.querySelectorAll(".info-box");
+            infoBoxes.forEach((box, index) => {
+                setTimeout(() => {
+                    box.style.opacity = "1";
+                    box.style.transform = "translateY(0)";
+                }, index * 500);
+            });
+
+            let infoBoxButtons = document.querySelectorAll(".info-box-button");
+            let modalOverlay = document.querySelector(".modal-overlay");
+            let modal = document.querySelector(".modal");
+
+            infoBoxButtons.forEach(button => {
+                button.addEventListener("click", function() {
+                    modalOverlay.classList.add("active");
+                });
+            });
+
+            modalOverlay.addEventListener("click", function(event) {
+                if (event.target === modalOverlay) {
+                    modalOverlay.classList.remove("active");
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <video id="video-background" autoplay muted loop>
+        <source src="https://media.istockphoto.com/id/1320462805/ru/%D0%B2%D0%B8%D0%B4%D0%B5%D0%BE/%D0%B2%D1%8B%D1%81%D0%BE%D0%BA%D0%BE%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D1%87%D0%BD%D1%8B%D0%B5-%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B5-%D1%84%D0%BE%D0%BD%D1%8B-%D0%B4%D0%B2%D0%B8%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F-%D0%BA%D1%80%D0%B0%D1%81%D0%B8%D0%B2%D1%8B%D0%B9-%D0%BA%D1%80%D0%B0%D1%81%D0%BE%D1%87%D0%BD%D1%8B%D0%B9-%D1%84%D0%BE%D0%BD.mp4?s=mp4-640x640-is&k=20&c=sNw8mDxxjT7AFsS_jR-3ufd_ue5qHrLn7pCi09MAgiE=" type="video/mp4">
+    </video>
+    <section>
+        <h1>Добро пожаловать!</h1>
+        <p>Это мой сайт, мини история</p>
+        <div class="info-box">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQum8sFl1RkwcG9CENO9m7rVKX5cQCH_o5mZw&s" alt="вставочк1">
+            <h2>Как все началось</h2>
+            <p>В 2021 году началось знакомство с программированием. Изучил HTML и CSS, сделал несколько сайтов, опубликовал на GitHub в закрытые репозитории. В этом же году поучаствовал в первых хакатонах.</p>
+	    <h2>Переворот</h2>
+            <p>В 2023 году изучил Python, программировал на C#. Сделал немалое количество проектов в Unity, например:</p>
+            <p>Создал дудл в 3D, 2D платформер, шахматы, калькулятор 3D. Для каждой из работ сам создавал модели.</p>
+            <button class="info-box-button">Подробнее</button>
+        </div>
+        <div class="info-box">
+            <img src="https://i.pinimg.com/564x/92/99/dd/9299dd89a8ebdf253d2c36702f11e9c4.jpg" alt="вставочк2">
+	    <h2>Будующие планы</h2>
+            <p>Планы грандиозные, я выбрал свое направление в IT</p>
+	    <p>В первую очередь начну изучать C, позже думаю Java или Machine Learning на питоне, разобратся бы, в целом тема интересная </p>
+            <button class="info-box-button">Подробнее</button>
+        </div>
+        <a href="https://github.com/15SAVAGE" class="button">My GitHub</a>
+    </section>
+    <footer>
+        &copy; 2025 Все права защищены
+    </footer>
+
+    <!-- Модальное окно -->
+    <div class="modal-overlay">
+        <div class="modal">
+            <h1>Чуть подробнее</h1>
+            <p>В 2023 году у меня появился нормальный ноутбук, который открыл мне больше возможностей. Как раз на нем создал большую часть проектов.</p>
+            <p>Где-то в файлах лежат еще недоделанные разработки с классной идеей, но вряд ли они когда-то будут реализованы.</p>
+            <p>Усердно программировать начал уже ближе к 2024 году. Много проектов пришлось удалить только из-за нехватки памяти.</p>
+            <p>Связь: Telegram @Pudge_Inside</p>
+        </div>
+    </div>
+</body>
+</html>
