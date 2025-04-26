@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>15SAVAGE(arsenij)</title>
+    <title>Arsenij | 15SAVAGE </title>
     <style>
         body {
             font-family: Candara, sans-serif;
@@ -11,18 +11,6 @@
             padding: 0;
             text-align: center;
             color: white;
-        }
-        .info-box h2 {
-            color: #ff6f61; 
-            margin-bottom: 15px;
-        }
-        .info-box p {
-            font-size: 16px;
-            margin-bottom: 15px;
-        }
-        .highlight {
-            color: #ff6f61;
-            font-weight: bold;
         }
         #video-background {
             position: fixed;
@@ -71,18 +59,26 @@
             float: left; 
         }
         .info-box h2 {
-            font-size: 24px; 
-            color: #e8e8e8; 
-            margin-top: 0; 
-            margin-bottom: 10px; 
+            font-size: 24px;
+            color: #ff6f61;
+            margin-top: 0;
+            margin-bottom: 15px;
         }
         .info-box p {
-            font-size: 15px; 
+            font-size: 16px;
             text-align: left;
             color: #fff;
-            text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-            margin: 0 0 10px 0; 
-            line-height: 1.5; 
+            margin: 0 0 15px 0;
+            line-height: 1.5;
+        }
+        .info-box ul {
+            text-align: left;
+            color: white;
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }
+        .info-box li {
+            margin-bottom: 8px;
         }
         .info-box-button {
             position: absolute;
@@ -132,13 +128,13 @@
         .modal h1 {
             font-size: 24px;
             color: #ff6f61;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
         .modal p {
-            font-size: 15px; 
+            font-size: 16px;
             color: white;
             margin: 10px 0;
-            line-height: 1.5; 
+            line-height: 1.5;
         }
         .button {
             display: inline-block;
@@ -170,7 +166,7 @@
     </style>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            let infoBoxes = document.querySelectorAll(".info-box");
+            const infoBoxes = document.querySelectorAll(".info-box");
             infoBoxes.forEach((box, index) => {
                 setTimeout(() => {
                     box.style.opacity = "1";
@@ -178,17 +174,16 @@
                 }, index * 500);
             });
 
-            let infoBoxButtons = document.querySelectorAll(".info-box-button");
-            let modalOverlay = document.querySelector(".modal-overlay");
-            let modal = document.querySelector(".modal");
+            const infoBoxButtons = document.querySelectorAll(".info-box-button");
+            const modalOverlay = document.querySelector(".modal-overlay");
 
             infoBoxButtons.forEach(button => {
-                button.addEventListener("click", function() {
+                button.addEventListener("click", () => {
                     modalOverlay.classList.add("active");
                 });
             });
 
-            modalOverlay.addEventListener("click", function(event) {
+            modalOverlay.addEventListener("click", (event) => {
                 if (event.target === modalOverlay) {
                     modalOverlay.classList.remove("active");
                 }
@@ -207,13 +202,13 @@
         <div class="info-box">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQum8sFl1RkwcG9CENO9m7rVKX5cQCH_o5mZw&s" alt="Начало пути">
             <h2>Мои первые шаги в IT</h2>
-            <p>В <span class="highlight">2021 году</span> я открыл для себя мир программирования. Начав с основ <span class="highlight">HTML и CSS</span>, я создал свои первые веб-страницы и разместил их на GitHub.</p>
-            <p>Этот год запомнился мне участием в первых <span class="highlight">хакатонах</span>, где я получил бесценный опыт командной работы и решения реальных задач.</p>
+            <p>В 2021 году я открыл для себя мир программирования. Начав с основ HTML и CSS, я создал свои первые веб-страницы и разместил их на GitHub.</p>
+            <p>Этот год запомнился мне участием в первых хакатонах, где я получил бесценный опыт командной работы и решения реальных задач.</p>
             
             <h2>Прорыв и новые технологии</h2>
-            <p><span class="highlight">2023 год</span> стал переломным моментом: я освоил <span class="highlight">Python и C++</span>, а также погрузился в разработку игр на <span class="highlight">Unity с C#</span>.</p>
+            <p>2023 год стал переломным моментом: я освоил Python и C++, а также погрузился в разработку игр на Unity с C#.</p>
             <p>Среди моих проектов:</p>
-            <ul style="text-align: left; color: white; padding-left: 20px;">
+            <ul>
                 <li>3D дудл-игра с собственной графикой</li>
                 <li>2D платформер с уникальной механикой</li>
                 <li>3D шахматы с кастомными моделями</li>
@@ -225,14 +220,14 @@
         <div class="info-box">
             <img src="https://i.pinimg.com/564x/92/99/dd/9299dd89a8ebdf253d2c36702f11e9c4.jpg" alt="Планы на будущее">
             <h2>Мои цели и планы развития</h2>
-            <p>Сейчас я сосредоточен на углубленном изучении <span class="highlight">языка C</span> и системного программирования. В ближайших планах:</p>
-            <ul style="text-align: left; color: white; padding-left: 20px;">
-                <li>Освоение <span class="highlight">Java</span> для enterprise-разработки</li>
-                <li>Изучение <span class="highlight">Machine Learning</span> на Python</li>
+            <p>Сейчас я сосредоточен на углубленном изучении языка C++ и системного программирования. В ближайших планах:</p>
+            <ul>
+                <li>Освоение Java script для создания интерактивности на сайтах</li>
+                <li>Изучение Machine Learning на Python</li>
                 <li>Разработка собственного игрового движка</li>
                 <li>Участие в крупных open-source проектах</li>
             </ul>
-            <p>Особый интерес для меня представляет область <span class="highlight">искусственного интеллекта</span> и его практическое применение.</p>
+            <p>Особый интерес для меня представляет область искусственного интеллекта и его практическое применение.</p>
             <button class="info-box-button">Мои навыки</button>
         </div>
         
@@ -245,9 +240,11 @@
             <h1>Дополнительные детали</h1>
             <p>В 2023 году я обзавелся мощным ноутбуком, что позволило мне работать над более сложными проектами. Именно на этом устройстве было создано большинство моих работ.</p>
             <p>В моих архивах хранятся несколько перспективных незавершенных проектов с инновационными идеями. К сожалению, некоторые разработки пришлось удалить из-за ограниченного места на диске.</p>
-            <p>Наиболее продуктивный период начался в <span class="highlight">2024 году</span>, когда я смог сосредоточиться на серьезном программировании и создании комплексных решений.</p>
+            <p>Наиболее продуктивный период начался в 2024 году, когда я смог сосредоточиться на серьезном программировании и создании лучшийх решений.</p>
             <button class="info-box-button" style="margin-top: 20px; background: #ff6f61;">Закрыть</button>
         </div>
     </div>
+    
+   
 </body>
 </html>
