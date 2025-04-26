@@ -188,38 +188,61 @@
         <source src="https://media.istockphoto.com/id/1320462805/ru/%D0%B2%D0%B8%D0%B4%D0%B5%D0%BE/%D0%B2%D1%8B%D1%81%D0%BE%D0%BA%D0%BE%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D1%87%D0%BD%D1%8B%D0%B5-%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B5-%D1%84%D0%BE%D0%BD%D1%8B-%D0%B4%D0%B2%D0%B8%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F-%D0%BA%D1%80%D0%B0%D1%81%D0%B8%D0%B2%D1%8B%D0%B9-%D0%BA%D1%80%D0%B0%D1%81%D0%BE%D1%87%D0%BD%D1%8B%D0%B9-%D1%84%D0%BE%D0%BD.mp4?s=mp4-640x640-is&k=20&c=sNw8mDxxjT7AFsS_jR-3ufd_ue5qHrLn7pCi09MAgiE=" type="video/mp4">
     </video>
     <section>
-        <h1>Добро пожаловать!</h1>
-        <p>Это мой сайт, мини история</p>
+        <h1>Добро пожаловать в моё цифровое портфолио!</h1>
+        <p>Меня зовут Арсений, и это история моего пути в мире программирования</p>
+        
         <div class="info-box">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQum8sFl1RkwcG9CENO9m7rVKX5cQCH_o5mZw&s" alt="вставочк1">
-            <h2>Как все началось</h2>
-            <p>В 2021 году началось знакомство с программированием. Изучил HTML и CSS, сделал несколько сайтов, опубликовал на GitHub в закрытые репозитории. В этом же году поучаствовал в первых хакатонах.</p>
-	    <h2>Переворот</h2>
-            <p>В 2023 году изучил Python, программировал на C#. Сделал немалое количество проектов в Unity, например:</p>
-            <p>Создал дудл в 3D, 2D платформер, шахматы, калькулятор 3D. Для каждой из работ сам создавал модели.</p>
-            <button class="info-box-button">Подробнее</button>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQum8sFl1RkwcG9CENO9m7rVKX5cQCH_o5mZw&s" alt="Начало пути">
+            <h2>Мои первые шаги в IT</h2>
+            <p>В <span class="highlight">2021 году</span> я открыл для себя мир программирования. Начав с основ <span class="highlight">HTML и CSS</span>, я создал свои первые веб-страницы и разместил их на GitHub.</p>
+            <p>Этот год запомнился мне участием в первых <span class="highlight">хакатонах</span>, где я получил бесценный опыт командной работы и решения реальных задач.</p>
+            
+            <h2>Прорыв и новые технологии</h2>
+            <p><span class="highlight">2023 год</span> стал переломным моментом: я освоил <span class="highlight">Python и C++</span>, а также погрузился в разработку игр на <span class="highlight">Unity с C#</span>.</p>
+            <p>Среди моих проектов:</p>
+            <ul style="text-align: left; color: white; padding-left: 20px;">
+                <li>3D дудл-игра с собственной графикой</li>
+                <li>2D платформер с уникальной механикой</li>
+                <li>3D шахматы с кастомными моделями</li>
+                <li>Интерактивный 3D калькулятор</li>
+            </ul>
+            <button class="info-box-button">Узнать больше</button>
         </div>
+        
         <div class="info-box">
-            <img src="https://i.pinimg.com/564x/92/99/dd/9299dd89a8ebdf253d2c36702f11e9c4.jpg" alt="вставочк2">
-	    <h2>Будующие планы</h2>
-            <p>Планы грандиозные, я выбрал свое направление в IT</p>
-	    <p>В первую очередь начну изучать C, позже думаю Java или Machine Learning на питоне, разобратся бы, в целом тема интересная </p>
-            <button class="info-box-button">Подробнее</button>
+            <img src="https://i.pinimg.com/564x/92/99/dd/9299dd89a8ebdf253d2c36702f11e9c4.jpg" alt="Планы на будущее">
+            <h2>Мои цели и планы развития</h2>
+            <p>Сейчас я сосредоточен на углубленном изучении <span class="highlight">языка C</span> и системного программирования. В ближайших планах:</p>
+            <ul style="text-align: left; color: white; padding-left: 20px;">
+                <li>Освоение <span class="highlight">Java</span> для enterprise-разработки</li>
+                <li>Изучение <span class="highlight">Machine Learning</span> на Python</li>
+                <li>Разработка собственного игрового движка</li>
+                <li>Участие в крупных open-source проектах</li>
+            </ul>
+            <p>Особый интерес для меня представляет область <span class="highlight">искусственного интеллекта</span> и его практическое применение.</p>
+            <button class="info-box-button">Мои навыки</button>
         </div>
-        <a href="https://github.com/15SAVAGE" class="button">My GitHub</a>
+        
+        <a href="https://github.com/15SAVAGE" class="button">Посмотреть мои проекты на GitHub</a>
+        <a href="#" class="button" style="background: #ff6f61;">Связаться со мной</a>
     </section>
-    <footer>
-        &copy; 2025 Все права защищены
-    </footer>
 
-    <!-- Модальное окно -->
+    <div class="modal-overlay">
+        <div class="modal">
+            <h1>Дополнительные детали</h1>
+            <p>В 2023 году я обзавелся мощным ноутбуком, что позволило мне работать над более сложными проектами. Именно на этом устройстве было создано большинство моих работ.</p>
+            <p>В моих архивах хранятся несколько перспективных незавершенных проектов с инновационными идеями. К сожалению, некоторые разработки пришлось удалить из-за ограниченного места на диске.</p>
+            <p>Наиболее продуктивный период начался в <span class="highlight">2024 году</span>, когда я смог сосредоточиться на серьезном программировании и создании комплексных решений.</p>
+            <button class="info-box-button" style="margin-top: 20px; background: #ff6f61;">Закрыть</button>
+        </div>
+    </div>
+	
     <div class="modal-overlay">
         <div class="modal">
             <h1>Чуть подробнее</h1>
             <p>В 2023 году у меня появился нормальный ноутбук, который открыл мне больше возможностей. Как раз на нем создал большую часть проектов.</p>
             <p>Где-то в файлах лежат еще недоделанные разработки с классной идеей, но вряд ли они когда-то будут реализованы.</p>
             <p>Усердно программировать начал уже ближе к 2024 году. Много проектов пришлось удалить только из-за нехватки памяти.</p>
-            <p>Связь: Telegram @Pudge_Inside</p>
         </div>
     </div>
 </body>
